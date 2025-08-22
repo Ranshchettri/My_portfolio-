@@ -167,5 +167,4 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(typeHero, 400);
     }
   }
-  typeHero();
 });
