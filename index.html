@@ -39,8 +39,11 @@
         <button id="chatbox-close">X</button>
         <div class="chat-message bot">Hello! How can I assist you today? Choose a question below or type your own!</div>
         <div class="chat-questions" id="chat-questions"></div>
-        <input class="chat-input" type="text" placeholder="Ask me anything..." id="chat-input">
-        <button class="chat-btn" onclick="sendChatMessage()">Send</button>
+        <div id="chat-messages"></div> <!-- Add this for messages -->
+        <div class="chat-input-area">
+            <input class="chat-input" type="text" placeholder="Ask me anything..." id="chat-input">
+            <button class="chat-btn" onclick="sendChatMessage()">Send</button>
+        </div>
     </div>
 
     <footer>
