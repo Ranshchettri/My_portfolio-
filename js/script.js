@@ -1,16 +1,30 @@
 // Hamburger Menu Toggle
-document.querySelector(".hamburger").addEventListener("click", function () {
-  document.querySelector(".nav-links").classList.toggle("active");
-});
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+if (hamburger && navLinks) {
+  hamburger.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+  });
+}
 
 // Chatbot Functionality
-document.getElementById("chatbot").addEventListener("click", function () {
-  document.getElementById("chatbox").style.display = "block";
-});
+const chatbot = document.getElementById("chatbot");
+const chatbox = document.getElementById("chatbox");
+const chatboxClose = document.getElementById("chatbox-close");
+const chatQuestionsDiv = document.getElementById("chat-questions");
+const chatInput = document.getElementById("chat-input");
+const chatMessages = document.getElementById("chat-messages");
 
-document.getElementById("chatbox-close").addEventListener("click", function () {
-  document.getElementById("chatbox").style.display = "none";
-});
+if (chatbot && chatbox) {
+  chatbot.addEventListener("click", function () {
+    chatbox.style.display = "block";
+  });
+}
+if (chatboxClose && chatbox) {
+  chatboxClose.addEventListener("click", function () {
+    chatbox.style.display = "none";
+  });
+}
 
 // Pre-defined chatbot questions and answers
 const chatbotResponses = {
@@ -39,7 +53,7 @@ const chatbotResponses = {
 
 // Populate chat questions
 function populateChatQuestions() {
-  const chatQuestionsDiv = document.getElementById("chat-questions");
+  if (!chatQuestionsDiv) return;
   Object.keys(chatbotResponses).forEach((question) => {
     const button = document.createElement("button");
     button.classList.add("chat-question-btn");
@@ -48,8 +62,10 @@ function populateChatQuestions() {
     }
     button.textContent = question.charAt(0).toUpperCase() + question.slice(1);
     button.onclick = () => {
-      document.getElementById("chat-input").value = question;
-      sendChatMessage();
+      if (chatInput) {
+        chatInput.value = question;
+        sendChatMessage();
+      }
     };
     chatQuestionsDiv.appendChild(button);
   });
@@ -57,18 +73,16 @@ function populateChatQuestions() {
 
 // Send message to chatbot
 function sendChatMessage(event) {
-  if (event) {
-    event.preventDefault();
-  }
+  if (event) event.preventDefault();
+  if (!chatInput || !chatMessages) return;
 
-  const input = document.getElementById("chat-input");
-  const message = input.value.trim().toLowerCase();
+  const message = chatInput.value.trim().toLowerCase();
 
   if (message) {
     const userMessage = document.createElement("div");
     userMessage.classList.add("chat-message", "user");
     userMessage.textContent = message;
-    document.getElementById("chatbox").appendChild(userMessage);
+    chatMessages.appendChild(userMessage);
 
     const botMessage = document.createElement("div");
     botMessage.classList.add("chat-message", "bot");
@@ -81,65 +95,40 @@ function sendChatMessage(event) {
       }
     }
     botMessage.textContent = response;
+    chatMessages.appendChild(botMessage);
 
-    document.getElementById("chatbox").appendChild(botMessage);
-    document.getElementById("chat-input").value = "";
-    document.getElementById("chatbox").scrollTop =
-      document.getElementById("chatbox").scrollHeight;
+    chatInput.value = "";
+    chatMessages.scrollTop = chatMessages.scrollHeight;
   }
 }
 
-// Handle contact form submission with EmailJS
-function sendContactMessage(event) {
-  event.preventDefault();
-  const form = document.getElementById("contact-form");
-  const name = form.querySelector('input[name="name"]').value;
-  const email = form.querySelector('input[name="email"]').value;
-  const message = form.querySelector('textarea[name="message"]').value;
-
-  emailjs
-    .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-      from_name: name,
-      from_email: email,
-      message: message,
-    })
-    .then(
-      () => {
-        alert("Message sent successfully!");
-        form.reset();
-      },
-      (error) => {
-        alert("Failed to send message: " + JSON.stringify(error));
-      }
-    );
-}
-
 // Allow sending chat message with Enter key
-document
-  .getElementById("chat-input")
-  .addEventListener("keypress", function (e) {
+if (chatInput) {
+  chatInput.addEventListener("keypress", function (e) {
     if (e.key === "Enter") {
       sendChatMessage(e);
     }
   });
+}
 
 // Fix chatbot position above footer
-window.addEventListener("scroll", function () {
-  var footer = document.querySelector("footer");
-  var chatbox = document.getElementById("chatbox");
-  var footerPosition = footer.getBoundingClientRect();
-  var chatboxPosition = chatbox.getBoundingClientRect();
+const footer = document.querySelector("footer");
+if (footer && chatbox) {
+  window.addEventListener("scroll", function () {
+    var footerPosition = footer.getBoundingClientRect();
+    var chatboxPosition = chatbox.getBoundingClientRect();
 
-  if (
-    chatboxPosition.bottom > footerPosition.top &&
-    chatbox.style.display === "block"
-  ) {
-    chatbox.style.bottom =
-      footerPosition.top - chatboxPosition.height - 10 + "px";
-  } else {
-    chatbox.style.bottom = "4.5rem";
-  }
-});
+    if (
+      chatboxPosition.bottom > footerPosition.top &&
+      chatbox.style.display === "block"
+    ) {
+      chatbox.style.bottom =
+        footerPosition.top - chatboxPosition.height - 10 + "px";
+    } else {
+      chatbox.style.bottom = "4.5rem";
+    }
+  });
+}
 
 // Populate questions when the page loads
 populateChatQuestions();
@@ -147,7 +136,9 @@ populateChatQuestions();
 // Typing effect for hero section
 document.addEventListener("DOMContentLoaded", function () {
   const typingSpan = document.querySelector(".typing-text span");
-  const texts = ["Hello, I’m Ransh", "I am student of TU"];
+  if (!typingSpan) return; // Prevent error if not found
+
+  const texts = ["Hey,Myself Ransh ", "A S/w developer and AI/ML specialist"];
   let textIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
@@ -157,11 +148,11 @@ document.addEventListener("DOMContentLoaded", function () {
     let displayText = currentText.substring(0, charIndex);
 
     typingSpan.textContent = displayText;
-    typingSpan.style.borderRight = "2px solid #fff"; // makhan chipleko cursor
+    typingSpan.style.borderRight = "2px solid #fff";
 
     if (!isDeleting && charIndex < currentText.length) {
       charIndex++;
-      setTimeout(typeHero, 110);
+      setTimeout(typeHero, 70);
     } else if (!isDeleting && charIndex === currentText.length) {
       setTimeout(() => {
         isDeleting = true;
@@ -169,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 900);
     } else if (isDeleting && charIndex > 0) {
       charIndex--;
-      setTimeout(typeHero, 70);
+      setTimeout(typeHero, 50);
     } else if (isDeleting && charIndex === 0) {
       isDeleting = false;
       textIndex = (textIndex + 1) % texts.length;
