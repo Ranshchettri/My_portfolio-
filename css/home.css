@@ -447,16 +447,22 @@ body {
 .source-link:hover {
   color: #007a70;
 }
+footer,
 .footer {
-  background: #181818;
-  color: #fff;
-  padding: 2rem 2rem;
+  background: rgba(255, 255, 255, 0.18);
+  /* border: 2px solid rgba(255, 255, 255, 0.45); */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  color: #b0b0b0;
   text-align: center;
+  padding: 2rem 2rem;
+  /* border-radius: 24px 24px 0 0; */
+  margin: 50px auto 0 auto; /* 50px space above footer */
+  width: 100%;
   position: relative;
   overflow: hidden;
-  border-top: 1px solid #333;
-  bottom: 0;
-  width: 100%;
+  z-index: 2;
 }
 .footer::before {
   content: "";
