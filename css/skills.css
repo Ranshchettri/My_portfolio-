@@ -1,12 +1,56 @@
-.skills {
-  position: relative; /* for positioning pseudo-elements */
-  overflow: hidden; /* prevent bubble overflow if any */
-  background: #d1d5db; /* gray color, you can adjust the shade if needed, e.g., #9ca3af for darker gray */
-  color: #222;
-  padding: 2rem 1rem;
-  min-height: 60vh;
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes slideDownIn {
+  0% {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(8px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideLeftIn {
+  0% {
+    transform: translateX(-120px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(12px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
+.skills {
+  position: relative;
+  overflow: hidden;
+  background: #d1d5db;
+  color: #222;
+  padding: 5.5rem 1rem 1.5rem 1rem; /* More top padding, less bottom padding */
+  min-height: 60vh;
+}
 
 /* blurred bokeh bubbles layer to mimic the example screenshot */
 .skills::before {
@@ -33,6 +77,8 @@
   gap: 2.5rem;
   max-width: 1200px;
   margin: 0 auto;
+  margin-bottom: 0; /* Remove extra margin or padding from the bottom of the grid if present */
+  padding-bottom: 0;
 }
 
 /* glassmorphic panel for the skill groups (transparent + blur + bokeh highlights) */
@@ -60,6 +106,7 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.04);
   color: inherit;
   z-index: 0;
+  animation: slideLeftIn 2.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 /* soft inner glass rim */
@@ -393,7 +440,6 @@
     min-width: 100%;
   }
 }
-footer{
-      background: #f1f1f1;
-
+footer {
+  background: #f1f1f1;
 }

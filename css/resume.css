@@ -50,10 +50,10 @@
 .resume-section::before {
   content: "";
   position: absolute;
-  left: 0.7rem;
-  top: 1.2rem;
+  left: 17px; /* Centered under the dot */
+  top: 0;
   width: 3px;
-  height: calc(100% - 1.2rem);
+  height: 100%;
   background: #34d399;
   z-index: 0;
   border-radius: 2px;
@@ -65,8 +65,8 @@
 
 .resume-section .dot {
   position: absolute;
-  left: 0;
-  top: 1.2rem;
+  left: 8px; /* Center dot over the line */
+  top: 18px;
   width: 18px;
   height: 18px;
   background: #fff;
