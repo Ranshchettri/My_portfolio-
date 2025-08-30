@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/skills.css" />
   </head>
   <body>
+        <div class="brand-floating">Ransh</div>
+
     <nav>
       <div class="brand">Ransh</div>
       <div class="hamburger"><i class="fas fa-bars"></i></div>
@@ -23,66 +25,143 @@
         <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <div class="social-icons">
-        <a
-          href="https://www.facebook.com/aadarsha.karki.100236"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Facebook"
-          ><i class="fab fa-facebook"></i
-        ></a>
-        <a
-          href="https://www.instagram.com/ransh_xettri777/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-          ><i class="fab fa-instagram"></i
-        ></a>
-        <a
-          href="https://github.com/Ranshchettri"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-          ><i class="fab fa-github"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/ransh-chettri-852386315"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-      </div>
     </nav>
+
+    <!-- moved social icons out of the <nav> so they can sit fixed on the viewport -->
+    <div class="social-icons">
+      <a
+        href="https://www.facebook.com/aadarsha.karki.100236"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook"
+        ><i class="fab fa-facebook"></i
+      ></a>
+      <a
+        href="https://www.instagram.com/ransh_xettri777/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a
+        href="https://github.com/Ranshchettri"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
+        ><i class="fab fa-github"></i
+      ></a>
+      <a
+        href="https://www.linkedin.com/in/ransh-chettri-852386315"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+    </div>
 
     <main>
       <section class="skills">
-        <h2><i class="fas fa-laptop-code"></i> Skills:</h2>
-        <div class="skill-list">
-          <div class="skill-item"><i class="fas fa-code"></i> C</div>
-          <div class="skill-item"><i class="fas fa-code"></i> C++</div>
-          <div class="skill-item"><i class="fas fa-code"></i> C#</div>
-          <div class="skill-item"><i class="fab fa-html5"></i> HTML5</div>
-          <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS3</div>
-          <div class="skill-item"><i class="fab fa-java"></i> Java</div>
-          <div class="skill-item"><i class="fab fa-js"></i> JavaScript</div>
-          <div class="skill-item"><i class="fas fa-database"></i> MySQL</div>
-          <div class="skill-item"><i class="fab fa-node-js"></i> Node.js</div>
-          <div class="skill-item"><i class="fab fa-python"></i> Python</div>
-          <div class="skill-item"><i class="fas fa-wind"></i> Tailwind CSS</div>
-          <div class="skill-item">
-            <i class="fab fa-bootstrap"></i> Bootstrap
+        <div class="skills-grid">
+          <div class="skills-group">
+            <h2>Core Technologies</h2>
+            <p class="skills-desc">
+              Primary technologies I use for building modern web applications
+            </p>
+            <div class="skills-box-list">
+              <div class="skill-box">
+                <i class="fa-brands fa-nextjs"></i> Next.js
+              </div>
+              <div class="skill-box"><i class="fab fa-react"></i> React.js</div>
+              <div class="skill-box"><i class="fab fa-js"></i> JavaScript</div>
+              <div class="skill-box">
+                <i class="fab fa-bootstrap"></i> Bootstrap
+              </div>
+              <div class="skill-box"><i class="fab fa-java"></i> .NET</div>
+              <div class="skill-box"><i class="fas fa-code"></i>C</div>
+              <div class="skill-box"><i class="fab fa-html5"></i> HTML5</div>
+              <div class="skill-box"><i class="fab fa-css3-alt"></i> CSS3</div>
+              <div class="skill-box"><i class="fab fa-python"></i> Python</div>
+              <div class="skill-box"><i class="fab fa-vuejs"></i> Angular</div>
+              <div class="skill-box">
+                <i class="fab fa-node-js"></i> Node.js
+              </div>
+              <div class="skill-box">
+                <i class="fas fa-wind"></i> Tailwind CSS
+              </div>
+            </div>
           </div>
-          <div class="skill-item"><i class="fab fa-react"></i> React</div>
-          <div class="skill-item"><i class="fab fa-figma"></i> Figma</div>
-          <div class="skill-item"><i class="fas fa-paint-brush"></i> Canva</div>
-          <div class="skill-item"><i class="fab fa-git-alt"></i> Git</div>
-          <div class="skill-item"><i class="fab fa-github"></i> GitHub</div>
-          <div class="skill-item">
-            <i class="fab fa-wordpress"></i> WordPress
+          <div class="skills-group">
+            <h2>Backend & Cloud</h2>
+            <p class="skills-desc">
+              Technologies for server-side development and cloud services
+            </p>
+            <div class="skills-box-list">
+              <div class="skill-box"><i class="fas fa-database"></i> MySQL</div>
+              <div class="skill-box"><i class="fas fa-leaf"></i> MongoDB</div>
+              <div class="skill-box"><i class="fas fa-wind"></i> PostSql</div>
+              <div class="skill-box">
+                <i class="fas fa-database"></i> SQLite
+              </div>
+            </div>
           </div>
-          <div class="skill-item"><i class="fab fa-js"></i> TypeScript</div>
-          <div class="skill-item"><i class="fab fa-vuejs"></i> Angular</div>
+          <div class="skills-group">
+            <h2>Development Tools</h2>
+            <p class="skills-desc">
+              Essential tools for development workflow and deployment
+            </p>
+            <div class="skills-box-list">
+              <div class="skill-box"><i class="fab fa-docker"></i> Docker</div>
+              <div class="skill-box">
+                <i class="fas fa-paint-brush"></i>photoshop
+              </div>
+              <div class="skill-box"><i class="fab fa-github"></i> GitHub</div>
+              <div class="skill-box">
+                <i class="fas fa-paint-brush"></i> Canva
+              </div>
+              <div class="skill-box">
+                <i class="fab fa-wordpress"></i> wordpress
+              </div>
+              <div class="skill-box">
+                <i class="fas fa-network-wired"></i> REST APIs
+              </div>
+              <div class="skill-box"><i class="fab fa-figma"></i> Figma</div>
+            </div>
+          </div>
+          <div class="skills-group professional-skills">
+            <h2>Professional Skills</h2>
+            <p class="skills-desc">
+              Soft skills and professional competencies that enhance technical
+              work
+            </p>
+            <div class="skills-box-list">
+              <div class="skill-box skill-box-wide">
+                <i class="fas fa-brain"></i> Problem Solving
+                <span class="skill-box-sub"
+                  >Breaking down complex challenges into manageable
+                  solutions</span
+                >
+              </div>
+              <div class="skill-box skill-box-wide">
+                <i class="fas fa-users"></i> Team Collaboration
+                <span class="skill-box-sub"
+                  >Effective communication and teamwork in development
+                  projects</span
+                >
+              </div>
+              <div class="skill-box skill-box-wide">
+                <i class="fas fa-clock"></i> Time Management
+                <span class="skill-box-sub"
+                  >Efficient project planning and execution</span
+                >
+              </div>
+              <div class="skill-box skill-box-wide">
+                <i class="fas fa-lightbulb"></i> System Design
+                <span class="skill-box-sub"
+                  >Architecting scalable and maintainable systems</span
+                >
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

@@ -169,3 +169,43 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   typeHero();
 });
+
+// Interactive animations for skill cards
+document.querySelectorAll(".skill-card").forEach((card) => {
+  card.addEventListener("mouseenter", function () {
+    this.style.transform = "translateY(-12px) scale(1.02)";
+  });
+  card.addEventListener("mouseleave", function () {
+    this.style.transform = "translateY(0) scale(1)";
+  });
+});
+
+// Add click animation to arrows
+document.querySelectorAll(".skill-arrow").forEach((arrow) => {
+  arrow.addEventListener("click", function (e) {
+    e.stopPropagation();
+    this.style.transform = "scale(0.9)";
+    setTimeout(() => {
+      this.style.transform = "scale(1)";
+    }, 150);
+  });
+});
+
+// Stats counter animation on page load
+window.addEventListener("load", function () {
+  const numbers = document.querySelectorAll(".stat-number");
+  numbers.forEach((number) => {
+    const finalNumber = parseInt(number.textContent.replace("+", ""));
+    let currentNumber = 0;
+    const increment = finalNumber / 30;
+    const timer = setInterval(() => {
+      currentNumber += increment;
+      if (currentNumber >= finalNumber) {
+        number.textContent = `+${finalNumber}`;
+        clearInterval(timer);
+      } else {
+        number.textContent = `+${Math.floor(currentNumber)}`;
+      }
+    }, 50);
+  });
+});

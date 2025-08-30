@@ -12,9 +12,11 @@
     <link rel="stylesheet" href="css/home.css" />
   </head>
   <body>
+    <!-- floating brand (top-left) -->
+    <div class="brand-floating">Ransh</div>
+
+    <!-- centered pill nav (keeps Home/About/Resume/Skills/Projects/Contact) -->
     <nav>
-      <div class="brand">Ransh</div>
-      <div class="hamburger"><i class="fas fa-bars"></i></div>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -23,43 +25,161 @@
         <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <div class="social-icons">
-        <a
-          href="https://www.facebook.com/aadarsha.karki.100236"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Facebook"
-          ><i class="fab fa-facebook"></i
-        ></a>
-        <a
-          href="https://www.instagram.com/ransh_xettri777/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-          ><i class="fab fa-instagram"></i
-        ></a>
-        <a
-          href="https://github.com/Ranshchettri"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-          ><i class="fab fa-github"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/ransh-chettri-852386315"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-      </div>
     </nav>
 
-    <section class="hero">
-      <div class="typing-text"><span>Hey,Myself Ransh</span></div>
-      <p>From Nepal</p>
-      <a href="contact.html" class="hire-btn">Hire Me</a>
-    </section>
+    <!-- floating social icons (top-right) -->
+    <div class="social-floating">
+      <a
+        href="https://www.facebook.com/aadarsha.karki.100236"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+      <a
+        href="https://www.instagram.com/ransh_xettri777/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a
+        href="https://github.com/Ranshchettri"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
+        ><i class="fab fa-github"></i
+      ></a>
+      <a
+        href="https://www.linkedin.com/in/ransh-chettri-852386315"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+    </div>
+
+    <main class="home-main">
+      <!-- Left: Your profile card, typing effect, and hire button -->
+      <section class="home-left">
+        <!-- Keep your existing typing effect and hire button here -->
+        <div class="profile-card">
+          <div class="profile-image"></div>
+          <h2 class="profile-name">Aabid Ahmed</h2>
+          <div class="profile-labels">
+            <span class="video-label">
+              <i class="fab fa-youtube"></i> Video Tutorial
+            </span>
+            <span class="hot-label">
+              <i class="fas fa-fire"></i>
+            </span>
+          </div>
+          <!-- Typing effect and Hire Me button remain here -->
+          <div class="typing-text">
+            <!-- Your typing effect code here -->
+          </div>
+          <button class="hire-btn">Hire Me</button>
+        </div>
+      </section>
+
+      <!-- Right: New content from the provided code -->
+      <section class="home-right">
+        <div class="container">
+          <!-- Title Section -->
+          <div class="title-section">
+            <h1 class="title-main">SOFTWARE</h1>
+            <h2 class="title-secondary">ENGINEER</h2>
+            <p class="description">
+              Passionate about creating intuitive and engaging user experiences.
+              Specialize in transforming ideas into beautifully crafted
+              products.
+            </p>
+          </div>
+          <!-- Stats Section -->
+          <div class="stats-section">
+            <div class="stat-item">
+              <span class="stat-number">+2</span>
+              <div class="stat-label">YEARS OF<br />EXPERIENCE</div>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">+6</span>
+              <div class="stat-label">PROJECTS<br />COMPLETED</div>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">+4</span>
+              <div class="stat-label">WORLDWIDE<br />CLIENTS</div>
+            </div>
+          </div>
+          <!-- Skills Cards Section -->
+          <div class="cards-section">
+            <div class="skill-card orange">
+              <div class="skill-icon">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M3 3h18v18H3zM9 9h6v6H9z" />
+                  <path d="m15 3-6 6m12 0-6 6M9 21l6-6m-12 0 6-6" />
+                </svg>
+              </div>
+              <h3 class="skill-title">
+                DYNAMIC<br />
+                ANIMATION,<br />
+                MOTION DESIGN
+              </h3>
+              <div class="skill-arrow">→</div>
+            </div>
+            <div class="skill-card green">
+              <div class="skill-icon">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg>
+              </div>
+              <h3 class="skill-title">
+                FRAMER, FIGMA, WORDPRESS,<br />
+                REACTJS
+              </h3>
+              <div class="skill-arrow">→</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- quick in-page placeholders — remove or replace with real content/sections -->
+    <section
+      id="about"
+      style="min-height: 60vh; padding: 4rem 2rem; background: transparent"
+    ></section>
+    <section
+      id="resume"
+      style="min-height: 60vh; padding: 4rem 2rem; background: transparent"
+    ></section>
+    <section
+      id="skills"
+      style="min-height: 60vh; padding: 4rem 2rem; background: transparent"
+    ></section>
+    <section
+      id="projects"
+      style="min-height: 60vh; padding: 4rem 2rem; background: transparent"
+    ></section>
+    <section
+      id="contact"
+      style="min-height: 60vh; padding: 4rem 2rem; background: transparent"
+    ></section>
 
     <!-- Chatbot Section -->
     <div id="chatbot">💬</div>

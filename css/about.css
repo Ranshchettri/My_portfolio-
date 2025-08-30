@@ -18,6 +18,37 @@
   text-align: justify; /* Add this line */
 }
 
+/* Fix social icons to top-right corner */
+.social-icons {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  gap: 10px;
+  z-index: 9999;
+  background: transparent;
+  padding: 6px 8px;
+  border-radius: 8px;
+  align-items: center;
+  pointer-events: auto;
+}
+.social-icons a {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.social-icons a:hover {
+  transform: translateY(-3px);
+  background: rgba(0, 0, 0, 0.5);
+}
+
 @media (max-width: 768px) {
   .about {
     padding: 2rem 1rem;
@@ -30,4 +61,16 @@
   .about p {
     font-size: 0.9rem;
   }
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #f1f1f1;
+  text-align: center;
+  padding: 1rem 0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.07);
+  z-index: 100;
 }
