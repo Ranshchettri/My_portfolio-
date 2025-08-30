@@ -43,7 +43,14 @@
   }
 }
 
+body,
 .skills {
+  min-height: 0 !important;
+}
+
+.skills {
+  padding-bottom: 0.5rem !important;
+  margin-bottom: 0 !important;
   position: relative;
   overflow: hidden;
   background: #d1d5db;
@@ -442,4 +449,5 @@
 }
 footer {
   background: #f1f1f1;
+  margin-top: 0 !important;
 }
