@@ -5,18 +5,49 @@ body {
 
 /* Project section background: slightly darker gray */
 .projects {
-  background: rgba(60, 62, 70, 0.18); /* dark gray, very transparent */
-  padding: 3rem 2rem;
-  min-height: 60vh;
-  text-align: center;
-  border-radius: 18px;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.12);
+  background: transparent;
+  padding: 5.5rem 2rem 2rem 2rem; /* More top padding for space below navbar */
+  text-align: left;
+  border-radius: 0;
+  box-shadow: none;
 }
 
-.projects h2 {
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
-  color: #1a2526;
+.projects-title {
+  margin-bottom: 2.5rem;
+  margin-left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  gap: 1.2rem; /* Space between RECENT and PROJECTS */
+}
+
+.projects-title-main,
+.projects-title-secondary {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  line-height: 1;
+}
+
+.projects-title-main {
+  font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+  font-size: 4.2rem;
+  font-weight: 900;
+  color: #080808;
+  letter-spacing: -2px;
+  line-height: 0.95;
+  display: block;
+}
+
+.projects-title-secondary {
+  font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+  font-size: 4.2rem;
+  font-weight: 900;
+  color: #545151;
+  letter-spacing: -2px;
+  line-height: 0.95;
+  display: block;
 }
 
 .admin-btn {
@@ -210,44 +241,10 @@ body {
 
 @media (max-width: 768px) {
   .projects {
-    padding: 2rem 1rem;
+    padding-top: 3.5rem;
   }
-
-  .projects h2 {
-    font-size: 1.5rem;
-  }
-
-  .admin-btn {
-    padding: 0.6rem 1rem;
-    font-size: 0.9rem;
-  }
-
-  .project-form {
-    padding: 1.5rem;
-  }
-
-  .project-form input,
-  .project-form textarea {
-    font-size: 0.9rem;
-  }
-
-  .project-form button {
-    font-size: 0.9rem;
-  }
-
-  .projects .project-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card {
-    padding: 1.5rem;
-  }
-
-  .project-card h3 {
-    font-size: 1.1rem;
-  }
-
-  .project-card p {
-    font-size: 0.8rem;
+  .projects-title-main,
+  .projects-title-secondary {
+    font-size: 2.2rem;
   }
 }
