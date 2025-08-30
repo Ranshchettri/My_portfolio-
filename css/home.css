@@ -69,11 +69,11 @@ body {
 
 @media (max-width: 768px) {
   .hero {
-    padding: 3rem 1rem;
+    padding: 4rem 1rem;
   }
 
   .hero .typing-text {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .hero p {
@@ -81,7 +81,7 @@ body {
   }
 
   .hero .hire-btn {
-    padding: 0.6rem 1.5rem;
+    padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
   }
 }
@@ -167,6 +167,7 @@ body {
   align-items: flex-start;
   justify-content: center;
   margin-top: 2rem;
+  padding-top: 3rem; /* Add this line for more space below navbar */
 }
 
 .home-left {
@@ -446,7 +447,7 @@ body {
 .footer {
   background: #181818;
   color: #fff;
-  padding: 3rem 2rem;
+  padding: 2rem 2rem;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -517,6 +518,141 @@ body {
 .social-icon:hover i {
   color: #009b8c;
 }
+.custom-profile-card {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  border-radius: 20px;
+  padding: 40px 30px 30px 30px;
+  text-align: center;
+  position: relative;
+  width: 350px;
+  min-width: 320px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.dashed-line-top {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  width: 100px;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    #ff6b35 0 5px,
+    transparent 5px 10px
+  );
+  transform: rotate(-20deg);
+  z-index: 2;
+}
+
+.dashed-line-corner {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 60px;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    #ff6b35 0 4px,
+    transparent 4px 8px
+  );
+  transform: rotate(45deg);
+  z-index: 2;
+}
+
+.dashed-line-bottom {
+  position: absolute;
+  bottom: 180px;
+  left: -20px;
+  width: 120px;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    #ff6b35 0 5px,
+    transparent 5px 10px
+  );
+  transform: rotate(30deg);
+  z-index: 2;
+}
+
+.profile-image-container {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.custom-profile-image {
+  width: 200px;
+  height: 250px;
+  background: linear-gradient(45deg, #ff6b35, #c41e3a);
+  border-radius: 15px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.profile-silhouette {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 180px;
+  background: #000;
+  border-radius: 60px 60px 0 0;
+}
+.profile-silhouette::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background: #000;
+  border-radius: 50%;
+}
+
+.name {
+  font-size: 32px;
+  font-weight: bold;
+  color: #2a2a2a;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.description {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hire-btn {
+  background: #ff6b35;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+.hire-btn:hover {
+  background: #e55a2b;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+}
+
 @media (max-width: 768px) {
   .hero {
     padding: 4rem 1rem;

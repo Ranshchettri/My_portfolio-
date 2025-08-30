@@ -86,7 +86,7 @@ nav .social-icons a:hover {
 
 /* Ensure the centered pill nav stays centered and clickable above hero */
 nav {
-  position: absolute;
+  position: fixed;
   top: 1.6rem;
   left: 50%;
   transform: translateX(-50%);
@@ -137,6 +137,7 @@ nav ul.nav-links li a.active {
 
 /* right side social icons */
 nav .social-icons {
+    
   display: flex;
   gap: 0.6rem;
   align-items: center;
@@ -332,5 +333,7 @@ footer p {
 .brand-floating
 {
      color: rgb(0, 0, 0);
+     position: fixed;
+
 
 }
