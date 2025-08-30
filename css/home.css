@@ -12,11 +12,15 @@ body {
   min-height: 60vh;
 }
 
-.hero .typing-text {
-  display: inline-block;
-  font-size: 2.5rem;
-  white-space: nowrap; /* Ensure single line */
-  position: relative;
+.typing-text {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 900;
+  font-size: 2.8rem;
+  color: #222;
+  margin-bottom: 18px;
+  letter-spacing: -2px;
+  text-align: center;
 }
 
 .hero .typing-text span {
@@ -167,12 +171,12 @@ body {
   align-items: flex-start;
   justify-content: center;
   margin-top: 2rem;
-  padding-top: 3rem; /* Add this line for more space below navbar */
+  padding-top: 8.5rem; /* Increase this value for more space below navbar */
 }
 
 .home-left {
   flex: 1;
-  min-width: 340px;
+  min-width: 410px;
   max-width: 400px;
   display: flex;
   flex-direction: column;
@@ -200,7 +204,7 @@ body {
 .title-secondary {
   font-size: 6rem;
   font-weight: 900;
-  color: #404040;
+  color: #313131;
   letter-spacing: -4px;
   line-height: 0.85;
   margin-bottom: 3rem;
@@ -452,6 +456,8 @@ body {
   position: relative;
   overflow: hidden;
   border-top: 1px solid #333;
+  bottom: 0;
+  width: 100%;
 }
 .footer::before {
   content: "";
@@ -529,6 +535,11 @@ body {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   margin-top: 2rem;
+  min-height: 610px; /* Increase height */
+  margin-bottom: 40px; /* Add space below card */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .dashed-line-top {
@@ -725,4 +736,16 @@ body {
   .footer p {
     font-size: 0.9rem;
   }
+}
+
+.home-right .description {
+  text-align: left;
+  margin: 2.5rem 0 2rem 1rem; /* Top and left margin for left shift */
+  max-width: 520px; /* Reduce width for 3 lines */
+  font-size: 1.35rem;
+  color: #b3b3b3;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  word-break: break-word;
 }

@@ -1,7 +1,32 @@
 .contact {
-  padding: 3rem 2rem;
-  text-align: center;
-  background: linear-gradient(120deg, #d1d5db 0%, #a3a8af 100%);
+  padding: 5.5rem 2rem 2rem 2rem; /* Reduce bottom padding */
+  text-align: left;
+  background: #fff; /* Make background black */
+}
+
+.contact-title {
+  margin-bottom: 2.5rem;
+  margin-left: 0.5rem;
+}
+
+.contact-title-main {
+  font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+  font-size: 4.2rem;
+  font-weight: 900;
+  color: #0b0b0b;
+  letter-spacing: -2px;
+  line-height: 0.95;
+  display: block;
+}
+
+.contact-title-secondary {
+  font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+  font-size: 4.2rem;
+  font-weight: 900;
+  color: #545151;
+  letter-spacing: -2px;
+  line-height: 0.95;
+  display: block;
 }
 
 .contact h1 {
@@ -15,8 +40,9 @@
 
 .contact-container {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 2.5rem;
   max-width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -36,12 +62,12 @@
 
 .contact-info p {
   font-size: 1rem;
-  color: #4b5563;
+  color: #818588;
   margin-bottom: 0.5rem;
 }
 
 .contact-info strong {
-  color: #0e1119;
+  color: #19191a;
 }
 
 .contact-form {
@@ -49,17 +75,15 @@
   min-width: 250px;
   max-width: 560px;
 
-  /* Ice-cube glassmorphism for contact form */
-  background: rgba(255, 255, 255, 0.07); /* ultra transparent white */
-  border: 2.5px solid rgba(255, 255, 255, 0.55); /* strong white border */
+  /* Remove glassmorphism and transparency from contact-form */
+  background: #fffcfc; /* Solid white */
+  border: none;
   border-radius: 18px;
   padding: 2.5rem 2rem;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.22),
-    0 2px 16px 0 rgba(255, 255, 255, 0.18);
-
-  /* strong blur effect */
-  backdrop-filter: blur(28px) saturate(180%);
-  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1),
+    0 2px 16px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 
   transition: transform 0.18s ease, box-shadow 0.18s ease;
   position: relative;
@@ -67,20 +91,7 @@
 }
 
 .contact-form::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 18px;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0.22) 0%,
-    rgba(255, 255, 255, 0.04) 100%
-  );
-  pointer-events: none;
-  z-index: 0;
+  display: none;
 }
 
 .contact-form > * {
@@ -160,7 +171,25 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
+.side-title {
+  min-width: 320px;
+  max-width: 380px;
+  margin-bottom: 0;
+  margin-left: 0;
+  text-align: left;
+  align-self: flex-start;
+  padding-top: 0.5rem;
+}
+
 @media (max-width: 768px) {
+  .contact-title-main,
+  .contact-title-secondary {
+    font-size: 2.2rem;
+  }
+  .contact {
+    padding-top: 3.5rem;
+    padding-bottom: 1rem; /* Remove extra space at bottom on mobile too */
+  }
   .contact h1 {
     font-size: 2rem;
   }
@@ -174,5 +203,19 @@
   }
   .contact-form {
     padding: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .side-title {
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+    min-width: 0;
+    text-align: left;
+    padding-top: 0;
   }
 }

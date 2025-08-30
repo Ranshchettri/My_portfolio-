@@ -283,6 +283,9 @@ footer {
   padding: 1.5rem;
   position: relative;
   z-index: 1;
+
+  margin-top: 90px; /* Add space above footer */
+  padding-bottom: 15px; /* Push footer 15px from bottom */
 }
 
 footer p {
@@ -332,7 +335,7 @@ footer p {
 
 .brand-floating
 {
-     color: rgb(0, 0, 0);
+     color: rgb(27, 26, 26);
      position: fixed;
 
 
