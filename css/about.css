@@ -166,7 +166,7 @@ footer {
   position: absolute;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle at 30% 30%, #efb801, #f3bb16, #ffa000);
+  background: radial-gradient(circle at 30% 30%, #ffcc00e1, #f3b90d, #ffa000);
   border-radius: 50%;
   top: 0;
   left: 0;

@@ -743,16 +743,87 @@ footer,
   }
 }
 
-.home-right .description {
-  text-align: left;
-  margin: 2.5rem 0 2rem 1rem; /* Top and left margin for left shift */
-  max-width: 520px; /* Reduce width for 3 lines */
-  font-size: 1.35rem;
-  color: #b3b3b3;
-  font-weight: 500;
-  line-height: 1.6;
-  letter-spacing: 0.01em;
-  word-break: break-word;
+@media (max-width: 900px) {
+  .home-main {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 6rem;
+  }
+  .home-left,
+  .home-right {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+  }
+  .container {
+    padding: 0 1rem;
+  }
+  .cards-section {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .skill-card {
+    min-width: 0;
+    width: 100%;
+    padding: 1.5rem;
+  }
+  .stats-section {
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+  }
+  .title-main,
+  .title-secondary {
+    font-size: 2.5rem;
+    text-align: center;
+    letter-spacing: -2px;
+  }
+  .description {
+    font-size: 1rem;
+    text-align: center;
+    margin: 1.5rem auto 1rem auto;
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-card.custom-profile-card {
+    width: 100%;
+    min-width: 0;
+    padding: 1.2rem 0.5rem;
+    min-height: unset;
+    margin-bottom: 20px;
+  }
+  .profile-image-container {
+    margin-bottom: 18px;
+  }
+  .custom-profile-image {
+    width: 120px;
+    height: 140px;
+  }
+  .name {
+    font-size: 1.3rem;
+  }
+  .description {
+    font-size: 0.98rem;
+    max-width: 98vw;
+  }
+  .cards-section {
+    gap: 1rem;
+  }
+  .skill-card {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .stat-number {
+    font-size: 2.2rem;
+  }
+  .title-main,
+  .title-secondary {
+    font-size: 2rem;
+  }
 }
 
 /* Slide in from left */
@@ -793,4 +864,3 @@ footer,
     transform: none;
   }
 }
-
