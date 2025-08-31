@@ -1,8 +1,15 @@
+body {
+  font-family: "Arial", sans-serif;
+  background: white;
+  min-height: 100vh;
+  overflow: hidden; /* Prevent scrolling */
+  color: #333;
+}
+
 .about {
-  padding: 3rem 2rem;
-  background: linear-gradient(120deg, #d1d5db 0%, #a3a8af 100%);
-  min-height: 60vh;
-  text-align: center;
+  /* Remove background and padding so glass card is fully transparent and fills the screen */
+  padding: 0;
+  background: none;
 }
 
 .about h2 {
@@ -49,6 +56,76 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
+.about-bg-wrapper {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: #fff;
+}
+
+.about-bg-ball {
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(circle at 60% 40%, #ffe066 60%, #ffd700 100%);
+  border-radius: 50%;
+  filter: blur(8px);
+  opacity: 0.85;
+  pointer-events: none;
+  box-shadow: 0 0 120px 40px #ffe06699, 0 0 0 0 #ffd700;
+  transition: top 0.5s cubic-bezier(0.4, 2, 0.3, 1),
+    left 0.5s cubic-bezier(0.4, 2, 0.3, 1);
+  z-index: 1;
+}
+
+.about-glass {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 80px 0 0 80px;
+  padding: 3rem 2.5rem;
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 40px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 1100px) {
+  .about-bg-ball {
+    width: 600px;
+    height: 600px;
+    left: 30%;
+    top: 15%;
+  }
+  .about-glass {
+    margin: 40px 0 0 20px;
+    padding: 2rem 1rem;
+    max-width: 98vw;
+  }
+}
+@media (max-width: 700px) {
+  .about-bg-ball {
+    width: 350px;
+    height: 350px;
+    left: 10%;
+    top: 20%;
+  }
+  .about-glass {
+    margin: 20px 0 0 5px;
+    padding: 1rem 0.5rem;
+    border-radius: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .about {
     padding: 2rem 1rem;
@@ -73,4 +150,85 @@ footer {
   padding: 1rem 0;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.07);
   z-index: 100;
+}
+
+.ball-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.yellow-ball {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle at 30% 30%, #efb801, #f3bb16, #ffa000);
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  transition: transform 0.1s ease-out;
+}
+
+.main-container {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 60px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+}
+
+.content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  text-align: center; /* Center the text */
+  max-width: 800px;
+  margin: 0 auto; /* Center the block itself */
+}
+
+@media (max-width: 768px) {
+  .glass-card {
+    padding: 40px 30px;
+    margin: 20px;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .content {
+    font-size: 1rem;
+  }
+  .yellow-ball {
+    width: 400px;
+    height: 400px;
+  }
 }

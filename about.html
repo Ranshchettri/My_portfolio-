@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/about.css" />
   </head>
   <body>
-            <div class="brand-floating">Ransh</div>
+    <div class="brand-floating">Ransh</div>
 
     <div class="social-icons">
       <a
@@ -57,30 +57,31 @@
       </ul>
     </nav>
 
-    <section class="about">
-      <h2>ABOUT ME</h2>
-      <p>
-        I’m Roshan Sunuwar, an ambitious IT student currently pursuing my
-        Bachelor’s in Computer Applications (BCA) from Itahari Green Peace
+    <div class="ball-container">
+      <div class="yellow-ball" id="yellowBall"></div>
+    </div>
+
+    <div class="main-container">
+      <h1 class="section-title">ABOUT ME</h1>
+      <div class="content">
+        I'm Roshan Sunuwar, an ambitious IT student currently pursuing my
+        Bachelor's in Computer Applications (BCA) from Itahari Green Peace
         College, affiliated with Tribhuvan University. With a deep curiosity for
-        how technology shapes the world, I’m steadily mastering everything from
+        how technology shapes the world, I'm steadily mastering everything from
         frontend aesthetics to backend logic. I thrive on building functional,
         user-friendly web applications and enjoy solving real-world problems
-        with code whether it’s through Python, React, or a full-blown MERN stack
+        with code whether it's through Python, React, or a full-blown MERN stack
         setup.
-      </p>
-      <br /><br />
-
-      <p>
-        I’m still a student, I don’t wait for a degree to define my potential.
-        I’ve already developed multiple projects including a mobile shop system
+        <br /><br />
+        I'm still a student, I don't wait for a degree to define my potential.
+        I've already developed multiple projects including a mobile shop system
         with real-time chat and integrated payments proving that passion can
         beat experience. I believe in learning by doing, constantly sharpening
         my skills across programming languages, frameworks, and UI/UX tools.
-        With eyes set on becoming a software developer and AI/ML specialist, I’m
+        With eyes set on becoming a software developer and AI/ML specialist, I'm
         committed to staying ahead in this ever-evolving digital game.
-      </p>
-    </section>
+      </div>
+    </div>
 
     <div id="chatbot">💬</div>
     <div id="chatbox">
@@ -108,5 +109,15 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/about-ball.js"></script>
+    <script>
+      const ball = document.getElementById("about-bg-ball");
+      document.addEventListener("mousemove", (e) => {
+        const x = (e.clientX / window.innerWidth) * 100;
+        const y = (e.clientY / window.innerHeight) * 100;
+        ball.style.left = `${x}%`;
+        ball.style.top = `${y}%`;
+      });
+    </script>
   </body>
 </html>

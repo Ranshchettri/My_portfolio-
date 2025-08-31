@@ -13,7 +13,7 @@ body {
 }
 
 .typing-text {
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: "Courier New", Courier, monospace;
   font-weight: 700;
   font-size: 2.8rem;
   color: #222;
@@ -793,3 +793,4 @@ footer,
     transform: none;
   }
 }
+
