@@ -64,8 +64,8 @@
     </div>
 
     <main class="home-main">
-      <!-- Left: Your profile card, typing effect, and hire button -->
-      <section class="home-left">
+      <!-- Left: Profile Card -->
+      <section class="home-left slide-in-left">
         <div class="profile-card custom-profile-card">
           <div class="profile-image-container">
             <div class="profile-image custom-profile-image">
@@ -86,20 +86,21 @@
         </div>
       </section>
 
-      <!-- Right: New content from the provided code -->
+      <!-- Right: Main Content -->
       <section class="home-right">
         <div class="container">
-          <!-- Title Section -->
-          <div class="title-section">
+          <!-- Title Section (no slide-down, just appear) -->
+          <div class="title-section slide-down" style="animation-delay: 0.4s">
             <h1 class="title-main">SOFTWARE</h1>
             <h2 class="title-secondary">DEVELOPER</h2>
-            <p class="description">
+            <!-- Only this should slide down -->
+            <p class="description slide-down" style="animation-delay: 0.5s">
               Passionate about creating intuitive and engaging user experiences.
               Specialize in transforming ideas into beautifully crafted
               products.
             </p>
           </div>
-          <!-- Stats Section -->
+          <!-- Stats Section (NO slide-down here) -->
           <div class="stats-section">
             <div class="stat-item">
               <span class="stat-number">+2</span>
@@ -116,7 +117,10 @@
           </div>
           <!-- Skills Cards Section -->
           <div class="cards-section">
-            <div class="skill-card orange">
+            <div
+              class="skill-card orange slide-in-right"
+              style="animation-delay: 0.3s"
+            >
               <div class="skill-icon">
                 <svg
                   width="28"
@@ -137,7 +141,10 @@
               </h3>
               <div class="skill-arrow">→</div>
             </div>
-            <div class="skill-card green">
+            <div
+              class="skill-card green slide-in-right"
+              style="animation-delay: 0.5s"
+            >
               <div class="skill-icon">
                 <svg
                   width="28"

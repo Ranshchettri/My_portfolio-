@@ -219,3 +219,27 @@
     padding-top: 0;
   }
 }
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-80px);
+  animation: slideInLeft 1.2s cubic-bezier(0.4, 2, 0.3, 1) 0.2s forwards;
+}
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(80px);
+  animation: slideInRight 1.2s cubic-bezier(0.4, 2, 0.3, 1) 4.4s forwards;
+}
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
