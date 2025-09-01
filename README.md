@@ -89,10 +89,6 @@ image/
   image2.png
 ```
 
-## 📸 Screenshots
-
-> _Add screenshots here to showcase the UI and animations._
-
 ## 📬 Contact
 
 Feel free to reach out via the contact form or connect with me on [GitHub](https://github.com/Ranshchettri), [LinkedIn](https://www.linkedin.com/in/ransh-chettri-852386315), or [Instagram](https://www.instagram.com/ransh_xettri777/).
