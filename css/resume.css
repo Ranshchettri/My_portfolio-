@@ -166,7 +166,7 @@
 /* Fix social icons to top-right corner */
 .social-icons {
   position: fixed;
-  top: 16px;
+  top: 5px;
   right: 16px;
   display: flex;
   gap: 10px;

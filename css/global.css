@@ -52,7 +52,7 @@ nav .brand {
 .social-floating,
 nav .social-icons {
   position: absolute;
-  top: 1.25rem;
+  top: 1rem; /* was 1.25rem, now higher */
   right: 1.25rem;
   z-index: 1100;
   display: flex;
