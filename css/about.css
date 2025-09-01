@@ -3,7 +3,7 @@ body {
   background: white;
   min-height: 100vh;
   padding-top: 4.5rem !important; /* adjust if needed */
-  overflow: hidden; /* Prevent scrolling */
+  overflow: auto !important; /* Allow scrolling */
   color: #333;
 }
 
@@ -56,7 +56,7 @@ body {
   transform: translateY(-3px);
   background: rgba(0, 0, 0, 0.5);
 }
-.content{
+.content {
   text-align: justify;
 }
 .about-bg-wrapper {
@@ -123,9 +123,10 @@ body {
     top: 20%;
   }
   .about-glass {
-    margin: 20px 0 0 5px;
-    padding: 1rem 0.5rem;
-    border-radius: 20px;
+    margin: 10px 0 0 2px;
+    padding: 0.5rem 0.2rem;
+    border-radius: 14px;
+    max-width: 99vw;
   }
 }
 
