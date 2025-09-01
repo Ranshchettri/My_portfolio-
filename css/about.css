@@ -3,7 +3,6 @@ body {
   background: white;
   min-height: 100vh;
   padding-top: 4.5rem !important; /* adjust if needed */
-
   overflow: hidden; /* Prevent scrolling */
   color: #333;
 }
