@@ -422,7 +422,7 @@ body,
 @media (max-width: 480px) {
   /* place absolute if you want it inside nav flow on very small screens */
   .social-icons {
-    position: absolute;
+    position: fixed;
     top: 8px;
     right: 8px;
   }
