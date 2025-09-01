@@ -84,28 +84,51 @@ nav .social-icons a:hover {
   transform: translateY(-2px);
 }
 
-/* Ensure the centered pill nav stays centered and clickable above hero */
+/* Slim, single-row nav */
 nav {
   position: fixed;
-  top: 1.6rem;
+  top: 3.5rem; /* was 1.6rem, now lower */
   left: 50%;
   transform: translateX(-50%);
   z-index: 1050; /* below floating brand/icons but above hero content */
   display: flex;
   align-items: center;
   gap: 1.25rem;
-  padding: 0.45rem 1.25rem;
+  min-height: 48px;
+  padding: 0.1rem 1rem;
   border-radius: 999px;
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.1),
     rgba(255, 255, 255, 0.03)
   );
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px) saturate(120%);
-  -webkit-backdrop-filter: blur(8px) saturate(120%);
-  box-shadow: 0 10px 30px rgba(4, 6, 12, 0.25);
-  pointer-events: auto;
+  box-shadow: 0 4px 18px rgba(4, 6, 12, 0.13);
+}
+
+/* nav links: single row, scrollable if overflow */
+nav ul.nav-links {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 0.7rem;
+  width: auto;
+  justify-content: center;
+  padding: 0.1rem 0;
+  scrollbar-width: none;
+}
+nav ul.nav-links::-webkit-scrollbar {
+  display: none;
+}
+nav ul.nav-links li {
+  flex: 0 0 auto;
+}
+
+/* nav link style: slim */
+nav ul.nav-links li a {
+  font-size: 1rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
 }
 
 /* brand (left) */
@@ -118,9 +141,19 @@ nav .brand {
 
 /* center links inside pill */
 nav ul.nav-links {
-  display: flex;
+  display: flex !important;
   gap: 1rem;
   align-items: center;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  justify-content: center;
+  padding: 0.2rem 0;
+  scrollbar-width: none; /* Firefox */
+}
+nav ul.nav-links::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
 }
 nav ul.nav-links li a {
   color: #6e6e6e; /* gray */
@@ -344,25 +377,15 @@ footer p {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   nav {
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0.35rem 0.8rem;
-    gap: 0.5rem;
+    min-height: 40px;
+    padding: 0.1rem 0.3rem;
+    width: 99vw;
+    max-width: 99vw;
   }
   nav ul.nav-links {
-    display: none; /* keep existing hamburger JS to toggle if you want */
-  }
-  nav ul.nav-links.active {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: calc(100% + 0.6rem);
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(255, 255, 255, 0.04);
-    padding: 0.6rem;
-    border-radius: 8px;
-    box-shadow: 0 8px 24px rgba(4, 6, 12, 0.12);
+    gap: 0.2rem;
+    font-size: 0.98rem;
+    padding: 0.1rem 0;
   }
 
   #chatbot {

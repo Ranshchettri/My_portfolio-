@@ -170,7 +170,7 @@ body {
   align-items: flex-start;
   justify-content: center;
   margin-top: 2rem;
-  padding-top: 8.5rem; /* Increase this value for more space below navbar */
+  padding-top: 7.5rem; /* increase if needed */
 }
 
 .home-left {
