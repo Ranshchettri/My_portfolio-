@@ -409,3 +409,11 @@ footer p {
   color: rgb(27, 26, 26);
   position: fixed;
 }
+
+.home-main,
+.skills,
+.projects,
+.resume,
+.contact {
+  padding-top: 6.5rem !important; /* adjust if needed */
+}
