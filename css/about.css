@@ -58,6 +58,7 @@ body {
 }
 .content {
   text-align: justify;
+  
 }
 .about-bg-wrapper {
   position: relative;
@@ -215,7 +216,7 @@ footer {
   font-size: 1.1rem;
   line-height: 1.8;
   color: #444;
-  text-align: center; /* Center the text */
+  text-align: justify; /* Center the text */
   max-width: 800px;
   margin: 0 auto; /* Center the block itself */
 }
