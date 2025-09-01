@@ -57,7 +57,9 @@ body {
   transform: translateY(-3px);
   background: rgba(0, 0, 0, 0.5);
 }
-
+.content{
+  text-align: justify;
+}
 .about-bg-wrapper {
   position: relative;
   min-height: 100vh;
