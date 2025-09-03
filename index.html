@@ -66,17 +66,19 @@
     <main class="home-main">
       <!-- Left: Profile Card -->
       <section class="home-left slide-in-left">
-        <div class="profile-card custom-profile-card">
+        <!-- Profile Card Example -->
+        <div class="custom-profile-card">
           <div class="profile-image-container">
-            <div class="profile-image custom-profile-image">
-              <div class="profile-silhouette"></div>
+            <div class="custom-profile-image">
+              <img
+                src="image/image.png"
+                alt="Ransh chettri"
+                class="profile-photo"
+              />
             </div>
           </div>
-
-          <h1 class="name">Ransh chettri</h1>
-          <p class="description typing-text">
-            <span id="typing-desc"></span><span class="typing-cursor">|</span>
-          </p>
+          <div class="name">Ransh chettri</div>
+          <div class="description">A S/w developer and AI/ML specialist</div>
           <button
             class="hire-btn"
             onclick="window.location.href='contact.html'"
@@ -194,13 +196,8 @@
           placeholder="Ask me anything..."
           id="chat-input"
         />
-        <button class="chat-btn" aria-label="Send">
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-            <polygon points="2,14 26,3 16,24 13,17 2,14" fill="#fff" />
-            <polygon points="2,14 26,3 13,17" fill="#fff" />
-            <polygon points="26,3 16,24 13,17" fill="#fff" />
-          </svg>
-        </button>
+                <button class="chat-btn" onclick="sendChatMessage()">Send</button>
+
       </div>
     </div>
 
