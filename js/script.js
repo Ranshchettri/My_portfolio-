@@ -191,6 +191,15 @@ document.querySelectorAll(".skill-arrow").forEach((arrow) => {
   });
 });
 
+
+      const ball = document.getElementById("about-bg-ball");
+      document.addEventListener("mousemove", (e) => {
+        const x = (e.clientX / window.innerWidth) * 100;
+        const y = (e.clientY / window.innerHeight) * 100;
+        ball.style.left = `${x}%`;
+        ball.style.top = `${y}%`;
+      });
+
 // Stats counter animation on page load
 window.addEventListener("load", function () {
   const numbers = document.querySelectorAll(".stat-number");
