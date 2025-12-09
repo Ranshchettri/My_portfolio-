@@ -1,0 +1,209 @@
+.resume {
+  padding: 5.5rem 2rem 3rem 2rem; /* More top padding for space below navbar */
+  text-align: center;
+  background: #fff;
+}
+
+.resume h1 {
+  font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+  font-size: 4.2rem;
+  font-weight: 900;
+  color: #065f46;
+  margin-bottom: 2.5rem;
+  border: none;
+  padding-bottom: 0;
+  letter-spacing: -2px;
+  text-align: center;
+}
+
+.resume p {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.resume-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.resume-left,
+.resume-right {
+  flex: 1;
+  min-width: 250px;
+}
+
+.resume-section {
+  margin-bottom: 2rem;
+  text-align: left;
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.resume-section::before {
+  content: "";
+  position: absolute;
+  left: 17px; /* Centered under the dot */
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: #34d399;
+  z-index: 0;
+  border-radius: 2px;
+}
+
+.resume-section:first-child::before {
+  top: 2.2rem;
+}
+
+.resume-section .dot {
+  position: absolute;
+  left: 8px; /* Center dot over the line */
+  top: 18px;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border: 3px solid #34d399;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.bullet-point {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  background-color: #34d399;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.resume-section p {
+  font-size: 1rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.resume-section ul {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+
+.resume-section ul li {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.resume-section ul li:before {
+  content: "•";
+  color: #34d399;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.experience-section .timeline {
+  position: relative;
+  margin-left: 2rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid #222;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+.timeline-dot {
+  position: absolute;
+  left: -1.1rem;
+  top: 0.5rem;
+  width: 16px;
+  height: 16px;
+  background: #222;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.timeline-content {
+  background: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.07);
+}
+.timeline-content h3 {
+  font-size: 1.3rem;
+  color: #222;
+  margin-bottom: 0.2rem;
+}
+.exp-org {
+  color: #10b981;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+.exp-meta {
+  color: #444;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+.timeline-content p {
+  color: #222;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+/* Fix social icons to top-right corner */
+.social-icons {
+  position: fixed;
+  top: 5px;
+  right: 16px;
+  display: flex;
+  gap: 10px;
+  z-index: 9999;
+  background: transparent;
+  padding: 6px 8px;
+  border-radius: 8px;
+  align-items: center;
+  pointer-events: auto;
+}
+.social-icons a {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.social-icons a:hover {
+  transform: translateY(-3px);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .resume h1 {
+    font-size: 2rem;
+  }
+  .resume-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .resume-left,
+  .resume-right {
+    width: 100%;
+  }
+}

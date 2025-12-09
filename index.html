@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Ransh Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- floating brand (top-left) -->
+    <div class="brand-floating">Ransh</div>
+
+    <!-- centered pill nav (keeps Home/About/Resume/Skills/Projects/Contact) -->
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- floating social icons (top-right) -->
+    <div class="social-floating">
+      <a
+        href="https://www.facebook.com/aadarsha.karki.100236"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+      <a
+        href="https://www.instagram.com/ransh_xettri777/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a
+        href="https://github.com/Ranshchettri"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
+        ><i class="fab fa-github"></i
+      ></a>
+      <a
+        href="https://www.linkedin.com/in/ransh-chettri-852386315"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+    </div>
+
+    <main class="home-main">
+      <!-- Left: Profile Card -->
+      <section class="home-left slide-in-left">
+        <!-- Profile Card Example -->
+        <div class="custom-profile-card">
+          <div class="profile-image-container">
+            <div class="custom-profile-image">
+              <img
+                src="image/image.png"
+                alt="Ransh chettri"
+                class="profile-photo"
+              />
+            </div>
+          </div>
+          <div class="name">Ransh chettri</div>
+           <p class="description typing-text">
+            <span id="typing-desc"></span><span class="typing-cursor">|</span>
+          </p> 
+           <button
+            class="hire-btn"
+            onclick="window.location.href='contact.html'">
+            Hire Me
+          </button>
+        </div>
+      </section>
+
+      <!-- Right: Main Content -->
+      <section class="home-right">
+        <div class="container">
+          <!-- Title Section (no slide-down, just appear) -->
+          <div class="title-section slide-down" style="animation-delay: 0.4s">
+            <h1 class="title-main">SOFTWARE</h1>
+            <h2 class="title-secondary">DEVELOPER</h2>
+            <!-- Add this wrapper for lines + description -->
+            <div class="home-lines-desc-wrapper">
+              <div class="home-desc-lines">
+                <div class="home-desc-line"></div>
+                <div class="home-desc-line"></div>
+                <div class="home-desc-line"></div>
+              </div>
+              <div class="home-desc-text">
+                Passionate about creating intuitive and engaging user
+                experiences.Specialize in transforming <br />
+                ideas into beautifully crafted products.
+              </div>
+            </div>
+          </div>
+          <!-- Stats Section (NO slide-down here) -->
+          <div class="stats-section">
+            <div class="stat-item">
+              <span class="stat-number">+2</span>
+              <div class="stat-label">YEARS OF<br />EXPERIENCE</div>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">+6</span>
+              <div class="stat-label">PROJECTS<br />COMPLETED</div>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">+4</span>
+              <div class="stat-label">WORLDWIDE<br />CLIENTS</div>
+            </div>
+          </div>
+          <!-- Skills Cards Section -->
+          <div class="cards-section">
+            <div
+              class="skill-card orange slide-in-right"
+              style="animation-delay: 0.3s"
+            >
+              <div class="skill-icon">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M3 3h18v18H3zM9 9h6v6H9z" />
+                  <path d="m15 3-6 6m12 0-6 6M9 21l6-6m-12 0 6-6" />
+                </svg>
+              </div>
+              <h3 class="skill-title">
+                DYNAMIC<br />
+                ANIMATION,<br />
+                MODERN & MOTION DESIGN
+              </h3>
+              <div class="skill-arrow">→</div>
+            </div>
+            <div
+              class="skill-card green slide-in-right"
+              style="animation-delay: 0.5s"
+            >
+              <div class="skill-icon">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg>
+              </div>
+              <h3 class="skill-title">
+                 MERN,C,C#,<br/>JAVA, PYTHON , WORDPRESS,JS<br />
+                PHOTOSHOP, FIGMA
+              </h3>
+              <div class="skill-arrow">→</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Chatbot Section -->
+    <div id="chatbot">💬</div>
+    <div id="chatbox">
+      <button id="chatbox-close">X</button>
+      <div class="chat-message bot">
+        Hello! How can I assist you today? Choose a question below or type your
+        own!
+      </div>
+      <div class="chat-questions" id="chat-questions"></div>
+      <div id="chat-messages"></div>
+      <div class="chat-input-area">
+        <input
+          class="chat-input"
+          type="text"
+          placeholder="Ask me anything..."
+          id="chat-input"
+        />
+                <button class="chat-btn" onclick="sendChatMessage()">Send</button>
+
+      </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div id="custom-cursor"></div>
+
+   
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,423 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Floating brand (top-left) — make it plain text (no pill/ellipse) */
+.brand-floating {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  z-index: 1100;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0; /* no pill */
+  border-radius: 0;
+  background: transparent; /* remove background */
+  border: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  pointer-events: auto;
+}
+
+/* Hide any .brand that lives inside <nav> (avoids duplicate logo) */
+nav .brand {
+  display: none;
+}
+
+/* social icons container — transparent, icon-only */
+.social-floating,
+nav .social-icons {
+  position: absolute;
+  top: 1rem; /* was 1.25rem, now higher */
+  right: 1.25rem;
+  z-index: 1100;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  padding: 0; /* remove pill */
+  background: transparent;
+  border: none;
+}
+
+/* icon buttons — pure icons, subtle circular hover */
+.social-floating a,
+nav .social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.95);
+  background: transparent; /* no filled circle by default */
+  font-size: 16px;
+  transition: background 0.15s, color 0.15s, transform 0.12s;
+}
+.social-floating a:hover,
+nav .social-icons a:hover {
+  background: rgba(255, 255, 255, 0.06); /* subtle hover ring */
+  color: #00c4b4;
+  transform: translateY(-2px);
+}
+
+/* Slim, single-row nav */
+nav {
+  position: fixed;
+  top: 3.5rem; /* was 1.6rem, now lower */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1050; /* below floating brand/icons but above hero content */
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  min-height: 48px;
+  padding: 0.1rem 1rem;
+  border-radius: 999px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.03)
+  );
+  box-shadow: 0 4px 18px rgba(4, 6, 12, 0.13);
+  overflow-x: visible; /* allow slide-in animation to show */
+}
+
+/* nav links: single row, scrollable if overflow */
+nav ul.nav-links {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 0.7rem;
+  width: auto;
+  justify-content: center;
+  padding: 0.1rem 0;
+  scrollbar-width: none;
+  margin-left: 2.5rem; /* Push links right so "Home" is always visible */
+  margin-right: 2.5rem; /* Optional: space on right too */
+}
+nav ul.nav-links::-webkit-scrollbar {
+  display: none;
+}
+nav ul.nav-links li {
+  flex: 0 0 auto;
+}
+
+/* nav link style: slim */
+nav ul.nav-links li a {
+  font-size: 1rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+}
+
+/* brand (left) */
+nav .brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #fff;
+  margin-right: 0.65rem;
+}
+
+/* center links inside pill */
+nav ul.nav-links {
+  display: flex !important;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  justify-content: center;
+  padding: 0.2rem 0;
+  scrollbar-width: none; /* Firefox */
+}
+nav ul.nav-links::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+nav ul.nav-links li a {
+  color: #6e6e6e; /* gray */
+  font-size: 0.98rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  transition: color 0.2s, background 0.2s;
+}
+nav ul.nav-links li a:hover,
+nav ul.nav-links li a.active {
+  background: rgba(255, 255, 255, 0.04);
+  color: #00c4b4;
+}
+
+/* right side social icons */
+nav .social-icons {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+nav .social-icons a {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1rem;
+  padding: 0.35rem;
+  border-radius: 50%;
+  transition: background 0.2s, color 0.2s;
+}
+nav .social-icons a:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: #00c4b4;
+}
+
+/* Chatbot */
+#chatbot {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: #667475;
+  padding: 0.6rem 0.9rem;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  z-index: 999;
+}
+
+#chatbox {
+  display: none;
+  position: fixed;
+  bottom: 4.5rem;
+  right: 1.5rem;
+  width: 90%;
+  max-width: 300px;
+  height: 400px;
+  background-color: #fff;
+  border: 2px solid #1a2526;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  overflow-y: auto;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: none !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  border-radius: 18px;
+}
+
+#chatbox-close {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+#chatbox-close:hover {
+  background: #cc0000;
+}
+
+.chat-message {
+  padding: 8px;
+  margin: 5px 0;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.chat-message.bot {
+  background: #5555556f !important; /* solid gray */
+  color: #fff !important;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.chat-message.user {
+  background: #0c7dee !important; /* solid dark */
+  color: #fff !important;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Chatbot Question Buttons: wider, two-column grid */
+.chat-questions {
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.chat-question-btn {
+  border: none !important;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #222;
+  font-weight: 500;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(31, 38, 135, 0.04);
+  margin-bottom: 0.2rem;
+  transition: background 0.2s;
+  font-size: 1rem;
+  padding: 0.7rem 0.5rem;
+  width: 100%;
+  text-align: center;
+  min-width: 0;
+  white-space: normal;
+}
+
+/* Input and Send button area: horizontal, attached look */
+.chat-input-area {
+  display: flex;
+  gap: 0;
+  align-items: stretch;
+  margin-top: 0.5rem;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(31, 38, 135, 0.04);
+  padding: 0;
+}
+
+.chat-input {
+  border: none;
+  background: transparent;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  color: #222;
+  flex: 1;
+  outline: none;
+  border-radius: 0;
+}
+
+.chat-btn {
+  background: #0c0c0c !important;
+  color: #f8f6f6 !important;
+  border: none;
+  border-radius: 0 12px 12px 0;
+  min-width: 56px;
+  width: 56px;
+  height: 48px;
+  padding: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-btn svg {
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+
+.span-full {
+  grid-column: 1 / -1;
+}
+
+/* Footer */
+/* footer {
+  background: rgba(255, 255, 255, 0.22);
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  color: #181818;
+  text-align: center;
+  padding: 2rem 1rem 1.5rem 1rem;
+  margin: 0 auto;
+  width: 100%;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.08);
+  border: none;
+  position: relative;
+  z-index: 2;
+}
+
+footer p {
+  font-size: 0.9rem;
+} */
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  nav {
+    min-height: 40px;
+    padding: 0.1rem 0.3rem;
+    width: 99vw;
+    max-width: 99vw;
+  }
+  nav ul.nav-links {
+    gap: 0.2rem;
+    font-size: 0.98rem;
+    padding: 0.1rem 0;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+  }
+
+  #chatbot {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  #chatbox {
+    bottom: 3.5rem;
+    right: 1rem;
+    width: 90%;
+    max-height: 50vh;
+  }
+}
+
+.brand-floating {
+  color: rgb(27, 26, 26);
+  position: fixed;
+}
+
+.home-main,
+.skills,
+.projects,
+.resume,
+.contact {
+  padding-top: 6.5rem !important; /* adjust if needed */
+}
